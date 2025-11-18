@@ -1,0 +1,42 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo cielo -->
+  <rect width="100%" height="200" fill="#87CEEB"/>
+  
+  <!-- Estacionamiento -->
+  <rect x="0" y="200" width="1200" height="400" fill="#D3D3D3"/>
+  
+  <!-- Líneas de estacionamiento -->
+  <line x1="0" y1="250" x2="1200" y2="250" stroke="white" stroke-width="3"/>
+  <line x1="0" y1="300" x2="1200" y2="300" stroke="white" stroke-width="3"/>
+  <line x1="0" y1="350" x2="1200" y2="350" stroke="white" stroke-width="3"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="white" stroke-width="3"/>
+  <line x1="0" y1="450" x2="1200" y2="450" stroke="white" stroke-width="3"/>
+  <line x1="0" y1="500" x2="1200" y2="500" stroke="white" stroke-width="3"/>
+  
+  <!-- Líneas verticales -->
+  <line x1="100" y1="200" x2="100" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="200" y1="200" x2="200" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="300" y1="200" x2="300" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="400" y1="200" x2="400" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="500" y1="200" x2="500" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="600" y1="200" x2="600" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="700" y1="200" x2="700" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="800" y1="200" x2="800" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="900" y1="200" x2="900" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="1000" y1="200" x2="1000" y2="600" stroke="white" stroke-width="2"/>
+  <line x1="1100" y1="200" x2="1100" y2="600" stroke="white" stroke-width="2"/>
+  
+  <!-- Edificio del centro comercial al fondo -->
+  <rect x="100" y="50" width="1000" height="150" fill="#FF6B35"/>
+  <rect x="200" y="30" width="200" height="170" fill="#4CAF50"/>
+  <rect x="500" y="40" width="300" height="160" fill="#1976D2"/>
+  <rect x="900" y="60" width="150" height="140" fill="#FFC107"/>
+  
+  <!-- Algunos vehículos representados -->
+  <rect x="120" y="220" width="60" height="25" fill="#333" rx="5"/>
+  <rect x="320" y="270" width="60" height="25" fill="#666" rx="5"/>
+  <rect x="720" y="320" width="60" height="25" fill="#333" rx="5"/>
+  
+  <!-- Texto -->
+  <text x="50%" y="550" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333" font-weight="bold">Estacionamiento Amplio</text>
+</svg>

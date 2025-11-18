@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Paseo Andaria</title>
+    <meta name="description" content="Descubre eventos, actividades y entretenimiento en Paseo Andaria">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Header con navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-shapes">
+                            <div class="shape shape-orange"></div>
+                            <div class="shape shape-green"></div>
+                            <div class="shape shape-blue"></div>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-paseo">Paseo</span>
+                        <span class="logo-andaria">Andaria</span>
+                    </div>
+                </div>
+                
+                <!-- Menú hamburguesa para móviles -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tiendas.html" class="nav-link">Tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="eventos.html" class="nav-link active">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactanos.html" class="nav-link">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Navegación secundaria">
+        <div class="container">
+            <ol>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><span class="separator">></span></li>
+                <li><span class="current">Eventos</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Sección Hero de Eventos -->
+    <main id="main-content">
+        <section class="page-hero" style="background: linear-gradient(135deg, rgba(25, 118, 210, 0.9), rgba(255, 107, 53, 0.8)), url('images/andaria1.jpg') center/cover;">
+            <div class="page-hero-content">
+                <h1>Eventos y Entretenimiento</h1>
+                <p>Vive experiencias únicas en Paseo Andaria</p>
+                
+                <!-- Enlaces de navegación rápida -->
+                <div class="quick-nav">
+                    <a href="#eventos-destacados" class="quick-nav-btn">
+                        <i class="fas fa-star"></i> Destacados
+                    </a>
+                    <a href="#entretenimiento-permanente" class="quick-nav-btn">
+                        <i class="fas fa-gamepad"></i> Entretenimiento
+                    </a>
+                    <a href="#calendario-mes" class="quick-nav-btn">
+                        <i class="fas fa-calendar"></i> Este Mes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos Destacados -->
+        <section class="section" id="eventos-destacados">
+            <div class="container">
+                <h2 class="section-title">🌟 Eventos Destacados</h2>
+                
+                <!-- Grid de eventos optimizado -->
+                <div class="eventos-grid">
+                    <article class="evento-card-modern">
+                        <div class="evento-imagen">
+                            <img src="images/andaria 2.jpg" alt="Festival de Moda" loading="lazy">
+                            <div class="evento-badge">Próximo</div>
+                        </div>
+                        <div class="evento-content">
+                            <div class="evento-fecha-moderna">
+                                <span class="dia">15</span>
+                                <span class="mes-año">NOV 2025</span>
+                            </div>
+                            <h3>Festival de Moda</h3>
+                            <p>Desfile con las últimas tendencias y marcas exclusivas</p>
+                            <div class="evento-details">
+                                <span><i class="fas fa-clock"></i> 18:00 - 21:00</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Plaza Central</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="evento-card-modern">
+                        <div class="evento-imagen">
+                            <img src="images/andaria 3.png" alt="Concierto Navideño" loading="lazy">
+                            <div class="evento-badge popular">Popular</div>
+                        </div>
+                        <div class="evento-content">
+                            <div class="evento-fecha-moderna">
+                                <span class="dia">22</span>
+                                <span class="mes-año">NOV 2025</span>
+                            </div>
+                            <h3>Concierto Navideño</h3>
+                            <p>Música en vivo para celebrar la temporada navideña</p>
+                            <div class="evento-details">
+                                <span><i class="fas fa-clock"></i> 19:30 - 22:00</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Área de Eventos</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="evento-card-modern">
+                        <div class="evento-imagen">
+                            <img src="images/andaria4.png" alt="Actividades Infantiles" loading="lazy">
+                            <div class="evento-badge familia">Familia</div>
+                        </div>
+                        <div class="evento-content">
+                            <div class="evento-fecha-moderna">
+                                <span class="dia">30</span>
+                                <span class="mes-año">NOV 2025</span>
+                            </div>
+                            <h3>Día de Actividades Infantiles</h3>
+                            <p>Diversión garantizada para toda la familia</p>
+                            <div class="evento-details">
+                                <span><i class="fas fa-clock"></i> 10:00 - 18:00</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Zona Infantil</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entretenimiento Permanente -->
+        <section class="section bg-light" id="entretenimiento-permanente">
+            <div class="container">
+                <h2 class="section-title">🎮 Entretenimiento Permanente</h2>
+                
+                <div class="entertainment-grid">
+                    <div class="entertainment-card">
+                        <div class="entertainment-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Zona de Juegos</h3>
+                        <p>Arcade con los juegos más populares</p>
+                        <div class="entertainment-info">
+                            <span class="horario">10:00 - 22:00</span>
+                            <span class="ubicacion">Nivel 2</span>
+                        </div>
+                    </div>
+
+                    <div class="entertainment-card">
+                        <div class="entertainment-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Área Infantil</h3>
+                        <p>Diversión segura para los más pequeños</p>
+                        <div class="entertainment-info">
+                            <span class="horario">09:00 - 21:00</span>
+                            <span class="ubicacion">Planta Baja</span>
+                        </div>
+                    </div>
+
+                    <div class="entertainment-card">
+                        <div class="entertainment-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Música en Vivo</h3>
+                        <p>Presentaciones los fines de semana</p>
+                        <div class="entertainment-info">
+                            <span class="horario">Sáb-Dom 18:00</span>
+                            <span class="ubicacion">Plaza Central</span>
+                        </div>
+                    </div>
+
+                    <div class="entertainment-card">
+                        <div class="entertainment-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Patio de Comidas</h3>
+                        <p>Variedad gastronómica para todos</p>
+                        <div class="entertainment-info">
+                            <span class="horario">08:00 - 23:00</span>
+                            <span class="ubicacion">Nivel 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendario del Mes -->
+        <section class="section" id="calendario-mes">
+            <div class="container">
+                <h2 class="section-title">📅 Noviembre 2025</h2>
+                
+                <div class="calendar-highlight">
+                    <div class="calendar-events">
+                        <div class="calendar-event">
+                            <span class="event-date">Nov 15</span>
+                            <span class="event-name">Festival de Moda</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Nov 22</span>
+                            <span class="event-name">Concierto Navideño</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Nov 30</span>
+                            <span class="event-name">Día Familiar</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Dic 01</span>
+                            <span class="event-name">Feria Tecnológica</span>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-cta">
+                        <h3>¿No te quieres perder nada?</h3>
+                        <p>Suscríbete a nuestro boletín para recibir todas las novedades</p>
+                        <a href="contactanos.html" class="cta-button">
+                            <i class="fas fa-envelope"></i> Suscribirse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <div class="logo-shapes">
+                                    <div class="shape shape-orange"></div>
+                                    <div class="shape shape-green"></div>
+                                    <div class="shape shape-blue"></div>
+                                </div>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-paseo">Paseo</span>
+                                <span class="logo-andaria">Andaria</span>
+                            </div>
+                        </div>
+                        <p>Tu destino de compras, entretenimiento y experiencias únicas</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tiendas.html">Tiendas</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contactanos.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +593 99 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@paseoandaria.com</li>
+                        <li><i class="fas fa-clock"></i> Lun-Dom: 10:00 - 22:00</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Paseo Andaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script-ux.js"></script>
+</body>
+</html>

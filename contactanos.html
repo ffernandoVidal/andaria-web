@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Paseo Andaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-shapes">
+                            <div class="shape shape-orange"></div>
+                            <div class="shape shape-green"></div>
+                            <div class="shape shape-blue"></div>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-paseo">Paseo</span>
+                        <span class="logo-andaria">Andaria</span>
+                    </div>
+                </div>
+                
+                <!-- Menú hamburguesa para móviles -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tiendas.html" class="nav-link">Tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="eventos.html" class="nav-link">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactanos.html" class="nav-link active">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Navegación secundaria">
+        <div class="container">
+            <ol>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><span class="separator">></span></li>
+                <li><span class="current">Contáctanos</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Sección Hero de Contacto -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte y resolver todas tus consultas</p>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sección Contáctanos -->
+    <section class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-white">Ponte en Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Ciudad, País</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@paseondaria.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horarios</h3>
+                            <p>Lun - Dom: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Servicios adicionales -->
+                    <div class="additional-services">
+                        <h4>Servicios Especiales</h4>
+                        <div class="services-list">
+                            <div class="service-item">
+                                <img src="images/Master Boach.webp" alt="Master Coach" loading="lazy">
+                                <span>Capacitación</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
+                                <span>Deportes</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/Manos maravillosas.jpg" alt="Manos Maravillosas" loading="lazy">
+                                <span>Belleza</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/Muebres fiesta.jpg" alt="Muebles Fiesta" loading="lazy">
+                                <span>Hogar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Selecciona el tipo de consulta</option>
+                            <option value="informacion">Información general</option>
+                            <option value="tiendas">Consulta sobre tiendas</option>
+                            <option value="eventos">Eventos y actividades</option>
+                            <option value="alquiler">Alquiler de local</option>
+                            <option value="sugerencias">Sugerencias</option>
+                            <option value="quejas">Quejas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Mapa -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Cómo Llegar</h2>
+            <div class="map-section">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Encuentra Paseo Andaria</h3>
+                    <p>Estamos ubicados en el corazón de la ciudad con fácil acceso desde todas las principales vías</p>
+                    <button class="map-button">Ver en Google Maps</button>
+                </div>
+                <div class="directions">
+                    <h3>Indicaciones de Llegada</h3>
+                    <div class="direction-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <h4>En Automóvil</h4>
+                            <p>Desde el centro de la ciudad: Toma la Av. Principal hacia el norte, después de 3 km encontrarás Paseo Andaria a tu derecha.</p>
+                        </div>
+                    </div>
+                    <div class="direction-item">
+                        <i class="fas fa-bus"></i>
+                        <div>
+                            <h4>En Transporte Público</h4>
+                            <p>Líneas de autobús: 15, 22, 34. Parada: "Paseo Andaria" - directamente frente al centro comercial.</p>
+                        </div>
+                    </div>
+                    <div class="direction-item">
+                        <i class="fas fa-walking"></i>
+                        <div>
+                            <h4>Caminando</h4>
+                            <p>Desde la estación central: 15 minutos caminando por la Av. Principal hacia el norte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección FAQ -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuáles son los horarios del centro comercial?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Estamos abiertos de lunes a domingo de 10:00 AM a 10:00 PM. Algunos restaurantes pueden tener horarios extendidos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿El estacionamiento es gratuito?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con más de 500 espacios de estacionamiento completamente gratuitos para nuestros visitantes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Hay WiFi gratuito?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Por supuesto, ofrecemos WiFi gratuito de alta velocidad en todas las áreas del centro comercial.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Tienen área de juegos para niños?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con una amplia área de juegos infantiles segura y supervisada, abierta durante todo el horario del centro comercial.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cómo puedo alquilar un local comercial?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para información sobre alquiler de locales, puedes contactarnos directamente o llenar el formulario de contacto seleccionando "Alquiler de local".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Paseo Andaria</h3>
+                    <p>Tu destino de compras favorito</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="tiendas.html">Directorio de tiendas</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a href="contactanos.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Estacionamiento gratuito</a></li>
+                        <li><a href="#">WiFi gratuito</a></li>
+                        <li><a href="#">Área de juegos</a></li>
+                        <li><a href="#">Servicio al cliente</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Paseo Andaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script-ux.js"></script>
+</body>
+</html>

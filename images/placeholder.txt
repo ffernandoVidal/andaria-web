@@ -1,0 +1,16 @@
+Archivos de imágenes:
+
+Para el carrusel, coloca las siguientes imágenes en esta carpeta:
+- paseo-andaria-1.jpg (imagen de la vista exterior con piscina)
+- paseo-andaria-2.jpg (imagen de la zona comercial colorida)
+- paseo-andaria-3.jpg (imagen de la entrada principal)
+
+Recomendaciones:
+- Tamaño: 1200x600 píxeles o similar (ratio 2:1)
+- Formato: JPG o PNG
+- Peso máximo: 500KB por imagen para mejor rendimiento
+
+Las imágenes actuales muestran:
+1. Vista exterior con área de piscina y arquitectura moderna
+2. Zona comercial con fachadas coloridas (verde, azul, rojo)
+3. Entrada principal con diseño contemporáneo

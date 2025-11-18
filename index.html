@@ -1,0 +1,356 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paseo Andaria - Centro Comercial</title>
+    <meta name="description" content="Paseo Andaria, tu destino de compras, entretenimiento y experiencias únicas en un solo lugar">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <!-- Header con navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-shapes">
+                            <div class="shape shape-orange"></div>
+                            <div class="shape shape-green"></div>
+                            <div class="shape shape-blue"></div>
+                        </div>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-paseo">Paseo</span>
+                        <span class="logo-andaria">Andaria</span>
+                    </div>
+                </div>
+                
+                <!-- Menú hamburguesa para móviles -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tiendas.html" class="nav-link">Tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="eventos.html" class="nav-link">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactanos.html" class="nav-link">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero/Inicio -->
+    <section id="inicio" class="hero-section">
+        <!-- Contenido principal -->
+        <main id="main-content" class="main-content">
+            <div class="hero-content">
+                <h2>Bienvenido a Paseo Andaria</h2>
+                <p>Tu destino de compras, entretenimiento y experiencias únicas</p>
+                <button class="cta-button" onclick="location.href='tiendas.html'">Descubre nuestras tiendas</button>
+            </div>
+        </main>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sección Tiendas -->
+    <section id="tiendas" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Tiendas</h2>
+            
+            <!-- Imagen destacada de la zona comercial -->
+            <div class="section-image">
+                <img data-src="images/andaria 7.png" alt="Zona comercial del Paseo Andaria" loading="lazy" class="lazy">
+                <div class="image-overlay">
+                    <h3>Amplia Variedad de Tiendas</h3>
+                    <p>Encuentra todo lo que necesitas en un solo lugar</p>
+                </div>
+            </div>
+            
+            <div class="tiendas-grid">
+                <div class="tienda-card">
+                    <div class="tienda-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Moda</h3>
+                    <p>Las mejores marcas de ropa y accesorios</p>
+                    <div class="tienda-logos">
+                        <img src="images/Moda/skechers.jpg" alt="Skechers" loading="lazy">
+                        <img src="images/Moda/Pacer.jpg" alt="Pacer" loading="lazy">
+                        <img src="images/Moda/legans.jpg" alt="Legans" loading="lazy">
+                    </div>
+                </div>
+                <div class="tienda-card">
+                    <div class="tienda-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restaurantes</h3>
+                    <p>Deliciosa gastronomía para todos los gustos</p>
+                    <div class="tienda-logos">
+                        <img src="images/Restaurantes/tacobell.jpg" alt="Taco Bell" loading="lazy">
+                        <img src="images/Restaurantes/campero.jpg" alt="Campero" loading="lazy">
+                        <img src="images/SanMartin.png" alt="San Martin" loading="lazy">
+                    </div>
+                </div>
+                <div class="tienda-card">
+                    <div class="tienda-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Tecnología</h3>
+                    <p>Los últimos dispositivos y gadgets tecnológicos</p>
+                    <div class="tienda-logos">
+                        <img src="images/Tecnologia/Samsung.jpg" alt="Samsung" loading="lazy">
+                        <img src="images/Tecnologia/Max.jpg" alt="Max" loading="lazy">
+                        <img src="images/Tecnologia/Mipc.jpg" alt="Mi PC" loading="lazy">
+                    </div>
+                </div>
+                <div class="tienda-card">
+                    <div class="tienda-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Entretenimiento</h3>
+                    <p>Diversión para toda la familia</p>
+                    <div class="tienda-logos">
+                        <img src="images/Entretenimiento/jugueton.jpg" alt="Juguetón" loading="lazy">
+                        <img src="images/Entretenimiento/Super Cars.jpg" alt="Super Cars" loading="lazy">
+                        <img src="images/lexus kids.jpg" alt="Lexus Kids" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Eventos -->
+    <section id="eventos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Próximos Eventos</h2>
+            <div class="eventos-container">
+                <div class="evento-card">
+                    <div class="evento-fecha">
+                        <span class="dia">15</span>
+                        <span class="mes">NOV</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Festival de Moda</h3>
+                        <p>Desfile de las últimas tendencias de temporada</p>
+                        <span class="evento-hora">18:00 - 21:00</span>
+                    </div>
+                </div>
+                <div class="evento-card">
+                    <div class="evento-fecha">
+                        <span class="dia">22</span>
+                        <span class="mes">NOV</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Concierto Navideño</h3>
+                        <p>Música en vivo para celebrar la temporada navideña</p>
+                        <span class="evento-hora">19:00 - 22:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imagen del área de entretenimiento -->
+            <div class="section-image">
+                <img src="images/andaria 8.png" alt="Área de entretenimiento del Paseo Andaria" loading="lazy">
+                <div class="image-overlay">
+                    <h3>Diversión Para Toda la Familia</h3>
+                    <p>Espacios diseñados para el entretenimiento y eventos especiales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title">Acerca de Nosotros</h2>
+            
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <p>Paseo Andaria es más que un lugar de compras. Somos un espacio donde las familias y amigos se reúnen para vivir experiencias memorables.</p>
+                    <p>Con más de 10 años sirviendo a nuestra comunidad, nos enorgullecemos de ofrecer la mejor selección de tiendas, restaurantes y entretenimiento en un ambiente moderno y acogedor.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>150+</h3>
+                            <p>Tiendas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25</h3>
+                            <p>Restaurantes</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10</h3>
+                            <p>Años de experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Información adicional -->
+                <div class="nosotros-info">
+                    <div class="info-text">
+                        <h4>Arquitectura Moderna y Funcional</h4>
+                        <p>Nuestro centro comercial cuenta con un diseño contemporáneo pensado para brindar la mejor experiencia de compras y entretenimiento a nuestros visitantes.</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-building"></i>
+                            <h5>Espacios Modernos</h5>
+                            <p>Instalaciones de última generación</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-parking"></i>
+                            <h5>Estacionamiento Amplio</h5>
+                            <p>Cómodo y seguro para todos</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-utensils"></i>
+                            <h5>Área Gastronómica</h5>
+                            <p>Variedad de opciones culinarias</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-door-open"></i>
+                            <h5>Fácil Acceso</h5>
+                            <p>Múltiples entradas y salidas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contáctanos -->
+    <section id="contactanos" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-white">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Ciudad, País</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@paseondaria.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horarios</h3>
+                            <p>Lun - Dom: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Servicios adicionales -->
+                    <div class="additional-services">
+                        <h4>Servicios Especiales</h4>
+                        <div class="services-list">
+                            <div class="service-item">
+                                <img src="images/Master Boach.webp" alt="Master Coach" loading="lazy">
+                                <span>Capacitación</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
+                                <span>Deportes</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/Manos maravillosas.jpg" alt="Manos Maravillosas" loading="lazy">
+                                <span>Belleza</span>
+                            </div>
+                            <div class="service-item">
+                                <img src="images/Muebres fiesta.jpg" alt="Muebles Fiesta" loading="lazy">
+                                <span>Hogar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Paseo Andaria</h3>
+                    <p>Tu destino de compras favorito</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#tiendas">Directorio de tiendas</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="#nosotros">Acerca de nosotros</a></li>
+                        <li><a href="#contactanos">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Estacionamiento gratuito</a></li>
+                        <li><a href="#">WiFi gratuito</a></li>
+                        <li><a href="#">Área de juegos</a></li>
+                        <li><a href="#">Servicio al cliente</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Paseo Andaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-ux.js"></script>
+</body>
+</html>
