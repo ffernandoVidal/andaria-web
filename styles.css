@@ -649,22 +649,31 @@ body {
     transition: 0.3s;
 }
 
-/* Sección Hero */
-.hero-section {
+/* Sección Hero con Carrusel de Fondo */
+.hero-carousel {
     height: 100vh;
     position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-green) 50%, var(--primary-blue) 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -673,8 +682,74 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.4);
     z-index: 1;
+}
+
+/* Controles del carrusel hero */
+.hero-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.hero-carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-prev {
+    left: 30px;
+}
+
+.hero-next {
+    right: 30px;
+}
+
+/* Indicadores del hero */
+.hero-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+}
+
+.hero-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.hero-indicator.active {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+}
+
+.hero-indicator:hover {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
 }
 
 .hero-content {
@@ -878,6 +953,62 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+}
+
+.tienda-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Secciones de Galería por Categoría */
+.category-gallery-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg) 0;
+    border-top: 2px solid var(--primary-orange);
+}
+
+.category-gallery-section h3 {
+    font-size: var(--font-size-xl);
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.category-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.gallery-item-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.gallery-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--shadow-hover);
+}
+
+.gallery-item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-item-card h4 {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-md);
+    color: var(--text-dark);
+    background: var(--gradient-primary);
+    color: white;
+    margin: 0;
 }
 
 .tienda-card {
@@ -1182,6 +1313,73 @@ body {
     padding: var(--spacing-lg);
 }
 
+.contact-info-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-item-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.contact-item-horizontal:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.contact-item-horizontal i {
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-item-horizontal h3 {
+    font-size: var(--font-size-md);
+    color: white;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-item-horizontal p {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-cta {
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.contact-cta p {
+    color: white;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-cta .cta-button {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-cta .cta-button:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
 .contact-info {
     color: white;
     padding: var(--spacing-lg);
@@ -1472,6 +1670,20 @@ body {
         gap: var(--spacing-md);
     }
     
+    .category-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .gallery-item-card img {
+        height: 150px;
+    }
+    
+    .contact-info-horizontal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
     .stores-gallery {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: var(--spacing-sm);
@@ -1513,6 +1725,20 @@ body {
         --img-logo-md: 50px;
         --spacing-xl: 1.5rem;
         --spacing-lg: 1rem;
+    }
+    
+    .category-gallery {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .gallery-item-card img {
+        height: 180px;
+    }
+    
+    .contact-info-horizontal {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
     
     .tienda-logos {

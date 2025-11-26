@@ -59,19 +59,45 @@
         </nav>
     </header>
 
-    <!-- Sección Hero/Inicio -->
-    <section id="inicio" class="hero-section">
+    <!-- Sección Hero/Inicio con Carrusel de Fondo -->
+    <section id="inicio" class="hero-carousel">
+        <!-- Slides del carrusel de fondo -->
+        <div class="hero-slide active" style="background-image: url('images/andaria1.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/andaria 2.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/andaria 3.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/andaria4.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/andaria 5.png')"></div>
+        <div class="hero-slide" style="background-image: url('images/andaria 6.png')"></div>
+        
         <!-- Contenido principal -->
         <main id="main-content" class="main-content">
             <div class="hero-content">
                 <h2>Bienvenido a Paseo Andaria</h2>
                 <p>Tu destino de compras, entretenimiento y experiencias únicas</p>
-                <button class="cta-button" onclick="location.href='tiendas.html'">Descubre nuestras tiendas</button>
+                <button class="cta-button" onclick="location.href='#tiendas'">Descubre nuestras tiendas</button>
             </div>
         </main>
         
         <!-- Overlay -->
         <div class="hero-overlay"></div>
+        
+        <!-- Controles del carrusel -->
+        <button class="hero-carousel-btn hero-prev" id="heroPrevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-carousel-btn hero-next" id="heroNextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicadores -->
+        <div class="hero-indicators">
+            <button class="hero-indicator active" data-slide="0"></button>
+            <button class="hero-indicator" data-slide="1"></button>
+            <button class="hero-indicator" data-slide="2"></button>
+            <button class="hero-indicator" data-slide="3"></button>
+            <button class="hero-indicator" data-slide="4"></button>
+            <button class="hero-indicator" data-slide="5"></button>
+        </div>
     </section>
 
     <!-- Sección Tiendas -->
@@ -89,52 +115,132 @@
             </div>
             
             <div class="tiendas-grid">
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-tshirt"></i>
+                <a href="#moda-section" class="tienda-card-link">
+                    <div class="tienda-card">
+                        <div class="tienda-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Moda</h3>
+                        <p>Las mejores marcas de ropa y accesorios</p>
                     </div>
-                    <h3>Moda</h3>
-                    <p>Las mejores marcas de ropa y accesorios</p>
-                    <div class="tienda-logos">
+                </a>
+                <a href="#restaurantes-section" class="tienda-card-link">
+                    <div class="tienda-card">
+                        <div class="tienda-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Restaurantes</h3>
+                        <p>Deliciosa gastronomía para todos los gustos</p>
+                    </div>
+                </a>
+                <a href="#tecnologia-section" class="tienda-card-link">
+                    <div class="tienda-card">
+                        <div class="tienda-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Tecnología</h3>
+                        <p>Los últimos dispositivos y gadgets tecnológicos</p>
+                    </div>
+                </a>
+                <a href="#entretenimiento-section" class="tienda-card-link">
+                    <div class="tienda-card">
+                        <div class="tienda-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Entretenimiento</h3>
+                        <p>Diversión para toda la familia</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Sección Moda con Galería -->
+            <div id="moda-section" class="category-gallery-section">
+                <h3>Moda</h3>
+                <div class="category-gallery">
+                    <div class="gallery-item-card">
                         <img src="images/Moda/skechers.jpg" alt="Skechers" loading="lazy">
+                        <h4>Skechers</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Moda/Pacer.jpg" alt="Pacer" loading="lazy">
+                        <h4>Pacer</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Moda/legans.jpg" alt="Legans" loading="lazy">
+                        <h4>Legans</h4>
+                    </div>
+                    <div class="gallery-item-card">
+                        <img src="images/Moda/Alanya.jpg" alt="Alanya" loading="lazy">
+                        <h4>Alanya</h4>
                     </div>
                 </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Restaurantes</h3>
-                    <p>Deliciosa gastronomía para todos los gustos</p>
-                    <div class="tienda-logos">
+            </div>
+            
+            <!-- Sección Restaurantes con Galería -->
+            <div id="restaurantes-section" class="category-gallery-section">
+                <h3>Restaurantes</h3>
+                <div class="category-gallery">
+                    <div class="gallery-item-card">
                         <img src="images/Restaurantes/tacobell.jpg" alt="Taco Bell" loading="lazy">
+                        <h4>Taco Bell</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Restaurantes/campero.jpg" alt="Campero" loading="lazy">
+                        <h4>Campero</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/SanMartin.png" alt="San Martin" loading="lazy">
+                        <h4>San Martin</h4>
+                    </div>
+                    <div class="gallery-item-card">
+                        <img src="images/Restaurantes/Beria-comida.jpg" alt="Beria" loading="lazy">
+                        <h4>Beria</h4>
                     </div>
                 </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Tecnología</h3>
-                    <p>Los últimos dispositivos y gadgets tecnológicos</p>
-                    <div class="tienda-logos">
+            </div>
+            
+            <!-- Sección Tecnología con Galería -->
+            <div id="tecnologia-section" class="category-gallery-section">
+                <h3>Tecnología</h3>
+                <div class="category-gallery">
+                    <div class="gallery-item-card">
                         <img src="images/Tecnologia/Samsung.jpg" alt="Samsung" loading="lazy">
+                        <h4>Samsung</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Tecnologia/Max.jpg" alt="Max" loading="lazy">
+                        <h4>Max</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Tecnologia/Mipc.jpg" alt="Mi PC" loading="lazy">
+                        <h4>Mi PC</h4>
+                    </div>
+                    <div class="gallery-item-card">
+                        <img src="images/Tecnologia/Samsung.jpg" alt="Samsung Store" loading="lazy">
+                        <h4>Samsung Store</h4>
                     </div>
                 </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Entretenimiento</h3>
-                    <p>Diversión para toda la familia</p>
-                    <div class="tienda-logos">
+            </div>
+            
+            <!-- Sección Entretenimiento con Galería -->
+            <div id="entretenimiento-section" class="category-gallery-section">
+                <h3>Entretenimiento</h3>
+                <div class="category-gallery">
+                    <div class="gallery-item-card">
                         <img src="images/Entretenimiento/jugueton.jpg" alt="Juguetón" loading="lazy">
+                        <h4>Juguetón</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/Entretenimiento/Super Cars.jpg" alt="Super Cars" loading="lazy">
+                        <h4>Super Cars</h4>
+                    </div>
+                    <div class="gallery-item-card">
                         <img src="images/lexus kids.jpg" alt="Lexus Kids" loading="lazy">
+                        <h4>Lexus Kids</h4>
+                    </div>
+                    <div class="gallery-item-card">
+                        <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
+                        <h4>Futeca</h4>
                     </div>
                 </div>
             </div>
@@ -243,72 +349,39 @@
     <section id="contactanos" class="section bg-dark">
         <div class="container">
             <h2 class="section-title text-white">Contáctanos</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Av. Principal 123, Ciudad, País</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@paseondaria.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Horarios</h3>
-                            <p>Lun - Dom: 10:00 AM - 10:00 PM</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Servicios adicionales -->
-                    <div class="additional-services">
-                        <h4>Servicios Especiales</h4>
-                        <div class="services-list">
-                            <div class="service-item">
-                                <img src="images/Master Boach.webp" alt="Master Coach" loading="lazy">
-                                <span>Capacitación</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
-                                <span>Deportes</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/Manos maravillosas.jpg" alt="Manos Maravillosas" loading="lazy">
-                                <span>Belleza</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/Muebres fiesta.jpg" alt="Muebles Fiesta" loading="lazy">
-                                <span>Hogar</span>
-                            </div>
-                        </div>
+            <div class="contact-info-horizontal">
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p>Av. Principal 123, Ciudad, País</p>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nombre completo" required>
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Teléfono</h3>
+                        <p>+1 (555) 123-4567</p>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@paseondaria.com</p>
                     </div>
-                    <div class="form-group">
-                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                </div>
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Horarios</h3>
+                        <p>Lun - Dom: 10:00 AM - 10:00 PM</p>
                     </div>
-                    <button type="submit" class="submit-btn">Enviar mensaje</button>
-                </form>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <p>¿Necesitas enviarnos un mensaje?</p>
+                <a href="contactanos.html" class="cta-button">Ir a Formulario de Contacto</a>
             </div>
         </div>
     </section>
@@ -351,6 +424,6 @@
         </div>
     </footer>
 
-    <script src="script-ux.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

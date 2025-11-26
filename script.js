@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar sistemas UX
     initMobileMenu();
+    initHeroCarousel();
     initScrollEffects();
     initFormValidation();
     initImageLazyLoading();
@@ -49,7 +50,125 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Funcionalidad del carrusel hero mejorada
+    function initHeroCarousel() {
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroPrevBtn = document.getElementById('heroPrevBtn');
+        const heroNextBtn = document.getElementById('heroNextBtn');
+        const heroIndicators = document.querySelectorAll('.hero-indicator');
+        
+        if (!heroSlides.length) return;
+        
+        let currentHeroSlide = 0;
+        const totalHeroSlides = heroSlides.length;
+        let heroAutoSlideInterval;
+        
+        // Función para mostrar slide del hero con animación suave
+        function showHeroSlide(index) {
+            // Remover clases activas con transición
+            heroSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    setTimeout(() => slide.classList.add('active'), 50);
+                }
+            });
+            
+            heroIndicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+                indicator.setAttribute('aria-current', i === index ? 'true' : 'false');
+            });
+            
+            currentHeroSlide = index;
+        }
+        
+        // Función para siguiente slide del hero
+        function nextHeroSlide() {
+            const next = (currentHeroSlide + 1) % totalHeroSlides;
+            showHeroSlide(next);
+        }
+        
+        // Función para slide anterior del hero
+        function prevHeroSlide() {
+            const prev = (currentHeroSlide - 1 + totalHeroSlides) % totalHeroSlides;
+            showHeroSlide(prev);
+        }
+        
+        // Event listeners para botones del hero
+        heroNextBtn?.addEventListener('click', () => {
+            nextHeroSlide();
+            resetAutoSlide();
+        });
+        heroPrevBtn?.addEventListener('click', () => {
+            prevHeroSlide();
+            resetAutoSlide();
+        });
+        
+        // Event listeners para indicadores del hero
+        heroIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', function() {
+                showHeroSlide(index);
+                resetAutoSlide();
+            });
+        });
+        
+        // Función para reiniciar auto-slide
+        function resetAutoSlide() {
+            clearInterval(heroAutoSlideInterval);
+            heroAutoSlideInterval = setInterval(nextHeroSlide, 6000);
+        }
+        
+        // Auto-slide del hero
+        resetAutoSlide();
+        
+        // Pausar auto-slide al hover
+        const heroCarousel = document.querySelector('.hero-carousel');
+        heroCarousel?.addEventListener('mouseenter', () => clearInterval(heroAutoSlideInterval));
+        heroCarousel?.addEventListener('mouseleave', resetAutoSlide);
+        
+        // Control con teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                prevHeroSlide();
+                resetAutoSlide();
+            }
+            if (e.key === 'ArrowRight') {
+                nextHeroSlide();
+                resetAutoSlide();
+            }
+        });
+        
+        // Touch/swipe support mejorado
+        let heroTouchStartX = 0;
+        let heroTouchEndX = 0;
+        
+        if (heroCarousel) {
+            heroCarousel.addEventListener('touchstart', function(e) {
+                heroTouchStartX = e.changedTouches[0].screenX;
+            });
+            
+            heroCarousel.addEventListener('touchend', function(e) {
+                heroTouchEndX = e.changedTouches[0].screenX;
+                handleHeroSwipe();
+            });
+        }
+        
+        function handleHeroSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = heroTouchEndX - heroTouchStartX;
+            
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                if (swipeDistance > 0) {
+                    prevHeroSlide();
+                } else {
+                    nextHeroSlide();
+                }
+                resetAutoSlide();
+            }
+        }
+    }
+
     // Scroll suave para navegación
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
