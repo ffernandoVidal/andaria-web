@@ -13,17 +13,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <div class="logo-icon">
-                        <div class="logo-shapes">
-                            <div class="shape shape-orange"></div>
-                            <div class="shape shape-green"></div>
-                            <div class="shape shape-blue"></div>
-                        </div>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-paseo">Paseo</span>
-                        <span class="logo-andaria">Andaria</span>
-                    </div>
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                        <img src="images/logo png.png" alt="Paseo Andaria" style="height: 70px; width: 200px; object-fit: contain;">
+                    </a>
                 </div>
                 
                 <!-- Menú hamburguesa para móviles -->
@@ -45,6 +37,9 @@
                         <a href="eventos.html" class="nav-link">Eventos</a>
                     </li>
                     <li class="nav-item">
+                        <a href="cine.html" class="nav-link">Cine</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="nosotros.html" class="nav-link">Nosotros</a>
                     </li>
                     <li class="nav-item">
@@ -55,245 +50,130 @@
         </nav>
     </header>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Navegación secundaria">
-        <div class="container">
-            <ol>
-                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><span class="separator">></span></li>
-                <li><span class="current">Contáctanos</span></li>
-            </ol>
-        </div>
-    </nav>
-
     <!-- Sección Hero de Contacto -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Contáctanos</h1>
-            <p>Estamos aquí para ayudarte y resolver todas tus consultas</p>
-        </div>
-        <div class="hero-overlay"></div>
-    </section>
+    <main id="main-content">
+        <section class="page-hero" style="background: linear-gradient(135deg, rgba(13, 71, 161, 0.92), rgba(255, 107, 53, 0.88)), url('images/vistas/andaria 8.png') center/cover; min-height: 400px; display: flex; align-items: center; justify-content: center; margin-top: 80px;">
+            <div class="page-hero-content" style="text-align: center; color: white; max-width: 900px; padding: 3rem 2rem;">
+                <h1 style="color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 4px 8px rgba(0,0,0,0.4);">Suscríbete a Andaria</h1>
+                <p style="color: white; font-size: 1.3rem; margin-bottom: 0; text-shadow: 1px 2px 4px rgba(0,0,0,0.3);">Mantente informado sobre nuestros eventos y actividades</p>
+            </div>
+        </section>
 
-    <!-- Sección Contáctanos -->
-    <section class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-white">Ponte en Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Av. Principal 123, Ciudad, País</p>
+        <!-- Sección Suscripción -->
+        <section class="section" style="padding: 5rem 0;">
+            <div class="container">
+                
+                <!-- Formulario de Suscripción -->
+                <div class="social-commitment">
+                    <h2 class="section-title" style="text-align: center;">¡Únete a Nuestra Comunidad!</h2>
+                    <div class="commitment-content">
+                        <div class="commitment-text">
+                            <h3 style="text-align: center;">Mantente Informado</h3>
+                            <p style="text-align: center;">Suscríbete y recibe notificaciones exclusivas sobre nuevos eventos, promociones especiales y actividades emocionantes en Paseo Andaria.</p>
+                            
+                            <form class="subscription-form" id="subscriptionForm" style="margin-top: 2rem;">
+                                <div style="margin-bottom: 1.5rem;">
+                                    <label for="suscripcion-email" style="display: block; font-size: 1rem; color: var(--dark-blue); font-weight: 600; margin-bottom: 0.5rem;">
+                                        <i class="fas fa-envelope" style="color: var(--primary-blue); margin-right: 0.5rem;"></i>
+                                        Correo Electrónico
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="suscripcion-email" 
+                                        name="email"
+                                        placeholder="tu@correo.com" 
+                                        required
+                                        style="width: 100%; padding: 1rem 1.5rem; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 12px; transition: all 0.3s ease; outline: none;"
+                                        onfocus="this.style.borderColor='var(--primary-blue)'; this.style.boxShadow='0 0 0 3px rgba(25, 118, 210, 0.1)'"
+                                        onblur="this.style.borderColor='#e0e0e0'; this.style.boxShadow='none'"
+                                    >
+                                </div>
+                                
+                                <div style="margin-bottom: 1.5rem;">
+                                    <label style="display: flex; align-items: start; cursor: pointer; font-size: 0.95rem; color: #666;">
+                                        <input 
+                                            type="checkbox" 
+                                            name="acepta-terminos" 
+                                            required
+                                            style="margin-right: 0.75rem; margin-top: 0.25rem; width: 18px; height: 18px; cursor: pointer;"
+                                        >
+                                        <span>
+                                            Acepto recibir notificaciones por correo electrónico sobre eventos, promociones y actividades de Paseo Andaria.
+                                        </span>
+                                    </label>
+                                </div>
+                                
+                                <button 
+                                    type="submit" 
+                                    style="width: 100%; padding: 1.2rem; font-size: 1.2rem; font-weight: 700; color: white; background: linear-gradient(135deg, var(--primary-blue), #0D47A1); border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);"
+                                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(25, 118, 210, 0.4)'"
+                                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(25, 118, 210, 0.3)'"
+                                >
+                                    <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                                    Suscribirme Ahora
+                                </button>
+                                
+                                <div id="subscription-message" style="margin-top: 1.5rem; padding: 1rem; border-radius: 8px; display: none; text-align: center; font-weight: 600;"></div>
+                            </form>
+                            
+                            <ul class="commitment-list" style="margin-top: 2rem;">
+                                <li><i class="fas fa-calendar-star"></i> Acceso prioritario a eventos especiales</li>
+                                <li><i class="fas fa-gift"></i> Descuentos y ofertas exclusivas</li>
+                                <li><i class="fas fa-bell"></i> Notificaciones tempranas sobre actividades</li>
+                                <li><i class="fas fa-sparkles"></i> Invitaciones a lanzamientos de tiendas</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@paseondaria.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Horarios</h3>
-                            <p>Lun - Dom: 10:00 AM - 10:00 PM</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Servicios adicionales -->
-                    <div class="additional-services">
-                        <h4>Servicios Especiales</h4>
-                        <div class="services-list">
-                            <div class="service-item">
-                                <img src="images/Master Boach.webp" alt="Master Coach" loading="lazy">
-                                <span>Capacitación</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
-                                <span>Deportes</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/Manos maravillosas.jpg" alt="Manos Maravillosas" loading="lazy">
-                                <span>Belleza</span>
-                            </div>
-                            <div class="service-item">
-                                <img src="images/Muebres fiesta.jpg" alt="Muebles Fiesta" loading="lazy">
-                                <span>Hogar</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nombre completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Selecciona el tipo de consulta</option>
-                            <option value="informacion">Información general</option>
-                            <option value="tiendas">Consulta sobre tiendas</option>
-                            <option value="eventos">Eventos y actividades</option>
-                            <option value="alquiler">Alquiler de local</option>
-                            <option value="sugerencias">Sugerencias</option>
-                            <option value="quejas">Quejas</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Mensaje" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Sección de Mapa -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Cómo Llegar</h2>
-            <div class="map-section">
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h3>Encuentra Paseo Andaria</h3>
-                    <p>Estamos ubicados en el corazón de la ciudad con fácil acceso desde todas las principales vías</p>
-                    <button class="map-button">Ver en Google Maps</button>
-                </div>
-                <div class="directions">
-                    <h3>Indicaciones de Llegada</h3>
-                    <div class="direction-item">
-                        <i class="fas fa-car"></i>
-                        <div>
-                            <h4>En Automóvil</h4>
-                            <p>Desde el centro de la ciudad: Toma la Av. Principal hacia el norte, después de 3 km encontrarás Paseo Andaria a tu derecha.</p>
-                        </div>
-                    </div>
-                    <div class="direction-item">
-                        <i class="fas fa-bus"></i>
-                        <div>
-                            <h4>En Transporte Público</h4>
-                            <p>Líneas de autobús: 15, 22, 34. Parada: "Paseo Andaria" - directamente frente al centro comercial.</p>
-                        </div>
-                    </div>
-                    <div class="direction-item">
-                        <i class="fas fa-walking"></i>
-                        <div>
-                            <h4>Caminando</h4>
-                            <p>Desde la estación central: 15 minutos caminando por la Av. Principal hacia el norte.</p>
+                        <div class="commitment-image" style="flex: 1; min-width: 300px;">
+                            <img src="images/andaria1.jpg" alt="Suscríbete a Paseo Andaria" loading="lazy" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Sección FAQ -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>¿Cuáles son los horarios del centro comercial?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Estamos abiertos de lunes a domingo de 10:00 AM a 10:00 PM. Algunos restaurantes pueden tener horarios extendidos.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>¿El estacionamiento es gratuito?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sí, contamos con más de 500 espacios de estacionamiento completamente gratuitos para nuestros visitantes.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>¿Hay WiFi gratuito?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Por supuesto, ofrecemos WiFi gratuito de alta velocidad en todas las áreas del centro comercial.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>¿Tienen área de juegos para niños?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sí, contamos con una amplia área de juegos infantiles segura y supervisada, abierta durante todo el horario del centro comercial.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>¿Cómo puedo alquilar un local comercial?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Para información sobre alquiler de locales, puedes contactarnos directamente o llenar el formulario de contacto seleccionando "Alquiler de local".</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: var(--dark-blue); color: white;">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Paseo Andaria</h3>
-                    <p>Tu destino de compras favorito</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <div class="footer-logo">
+                        <img src="images/logo png.png" alt="Paseo Andaria" style="height: 80px; width: auto; margin-bottom: 1rem;">
+                        <p>Tu destino de compras, entretenimiento y experiencias únicas</p>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces rápidos</h4>
+                    <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="tiendas.html">Directorio de tiendas</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tiendas.html">Tiendas</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a href="cine.html">Cine</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="contactanos.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Servicios</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#">Estacionamiento gratuito</a></li>
-                        <li><a href="#">WiFi gratuito</a></li>
-                        <li><a href="#">Área de juegos</a></li>
-                        <li><a href="#">Servicio al cliente</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chimaltenango, Guatemala</li>
+                        <li><i class="fas fa-phone"></i> +502 7849-5000</li>
+                        <li><i class="fas fa-envelope"></i> info@paseoandaria.com</li>
+                        <li><i class="fas fa-clock"></i> Lun - Dom: 10:00 AM - 10:00 PM</li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Paseo Andaria. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Paseo Andaria - Chimaltenango, Guatemala. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -303,6 +183,30 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <script src="script-ux.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Manejo del formulario de suscripción
+        document.getElementById('subscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('suscripcion-email').value;
+            const messageDiv = document.getElementById('subscription-message');
+            
+            // Simulación de envío exitoso
+            messageDiv.style.display = 'block';
+            messageDiv.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            messageDiv.style.color = 'white';
+            messageDiv.innerHTML = '<i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>¡Gracias por suscribirte! Pronto recibirás nuestras novedades en ' + email;
+            
+            // Resetear formulario
+            this.reset();
+            
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(function() {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>

@@ -13,17 +13,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <div class="logo-icon">
-                        <div class="logo-shapes">
-                            <div class="shape shape-orange"></div>
-                            <div class="shape shape-green"></div>
-                            <div class="shape shape-blue"></div>
-                        </div>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-paseo">Paseo</span>
-                        <span class="logo-andaria">Andaria</span>
-                    </div>
+                    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                        <img src="images/logo png.png" alt="Paseo Andaria" style="height: 70px; width: 200px; object-fit: contain;">
+                    </a>
                 </div>
                 
                 <!-- Menú hamburguesa para móviles -->
@@ -45,6 +37,9 @@
                         <a href="eventos.html" class="nav-link">Eventos</a>
                     </li>
                     <li class="nav-item">
+                        <a href="cine.html" class="nav-link">Cine</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="nosotros.html" class="nav-link">Nosotros</a>
                     </li>
                     <li class="nav-item">
@@ -55,125 +50,482 @@
         </nav>
     </header>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Navegación secundaria">
-        <div class="container">
-            <ol>
-                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><span class="separator">></span></li>
-                <li><span class="current">Tiendas</span></li>
-            </ol>
-        </div>
-    </nav>
+ 
 
-    <!-- Sección Hero de Tiendas -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Nuestras Tiendas</h1>
-            <p>Descubre la amplia variedad de tiendas que tenemos para ti</p>
-            
-            <!-- Enlaces de navegación rápida -->
-            <div class="quick-nav">
-                <a href="#categorias-tiendas" class="quick-nav-btn">
-                    <i class="fas fa-list"></i> Ver Categorías
-                </a>
-                <a href="eventos.html" class="quick-nav-btn">
-                    <i class="fas fa-calendar"></i> Eventos
-                </a>
-            </div>
+    <!-- Sección Hero de Tiendas con Carrusel -->
+    <section id="inicio" class="hero-carousel">
+        <!-- Slides del carrusel -->
+        <div class="hero-slide active">
+            <img src="images/Moda/skechers.jpg" alt="Skechers - Moda">
         </div>
+        <div class="hero-slide">
+            <img src="images/Moda/Pacer.jpg" alt="Pacer - Moda Deportiva">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Restaurantes/tacobell.jpg" alt="Taco Bell - Restaurante">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Restaurantes/campero.jpg" alt="Campero - Comida">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Tecnologia/Samsung.jpg" alt="Samsung - Tecnología">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Tecnologia/Max.jpg" alt="Max - Tecnología">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Entretenimiento/jugueton.jpg" alt="Juguetón - Entretenimiento">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Entretenimiento/Super Cars.jpg" alt="Super Cars - Entretenimiento">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Finanzas/Bam.jpg" alt="BAM - Finanzas">
+        </div>
+        <div class="hero-slide">
+            <img src="images/Finanzas/Intercop.jpg" alt="Intercop - Finanzas">
+        </div>
+        
+        <!-- Contenido principal -->
+        <main id="main-content" class="main-content">
+            <div class="hero-content">
+                <h1>Nuestras Tiendas</h1>
+                <p>Descubre la amplia variedad de tiendas que tenemos para ti</p>
+                <button class="cta-button" onclick="location.href='#categorias-tiendas'">Ver Categorías</button>
+            </div>
+        </main>
+        
+        <!-- Overlay -->
         <div class="hero-overlay"></div>
+        
+        <!-- Controles del carrusel -->
+        <button class="hero-carousel-btn hero-prev" id="heroPrevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-carousel-btn hero-next" id="heroNextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicadores -->
+        <div class="hero-indicators">
+            <button class="hero-indicator active" data-slide="0"></button>
+            <button class="hero-indicator" data-slide="1"></button>
+            <button class="hero-indicator" data-slide="2"></button>
+            <button class="hero-indicator" data-slide="3"></button>
+            <button class="hero-indicator" data-slide="4"></button>
+            <button class="hero-indicator" data-slide="5"></button>
+            <button class="hero-indicator" data-slide="6"></button>
+            <button class="hero-indicator" data-slide="7"></button>
+            <button class="hero-indicator" data-slide="8"></button>
+            <button class="hero-indicator" data-slide="9"></button>
+        </div>
     </section>
 
     <!-- Sección Tiendas -->
     <section class="section">
         <div class="container">
-            <!-- Imagen destacada de la zona comercial -->
-            <div class="section-image">
-                <img src="images/andaria 7.png" alt="Zona comercial del Paseo Andaria" loading="lazy">
-                <div class="image-overlay">
-                    <h3>Amplia Variedad de Tiendas</h3>
-                    <p>Encuentra todo lo que necesitas en un solo lugar</p>
+            <h2 class="section-title">Categorías de Tiendas</h2>
+            <p class="section-subtitle">Descubre las mejores marcas en cada categoría</p>
+            
+            <!-- Sección Moda -->
+            <div class="category-section" id="categorias-tiendas">
+                <h2 class="category-title">
+                    <i class="fas fa-tshirt"></i> Moda
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/skechers.jpg" alt="Skechers" loading="lazy">
+                        </div>
+                        <h3>Skechers</h3>
+                        <p>Calzado deportivo y casual para grandes y pequeños</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Pacer.jpg" alt="Pacer" loading="lazy">
+                        </div>
+                        <h3>Pacer</h3>
+                        <p>Ropa deportiva y accesorios de alta calidad</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/legans.jpg" alt="Legans" loading="lazy">
+                        </div>
+                        <h3>Legans</h3>
+                        <p>Moda contemporánea para toda la familia</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Alanya.jpg" alt="Alanya" loading="lazy">
+                        </div>
+                        <h3>Alanya</h3>
+                        <p>Tendencias y estilo en cada prenda</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/anais.jpg" alt="Anais" loading="lazy">
+                        </div>
+                        <h3>Anais</h3>
+                        <p>Elegancia y sofisticación para la mujer moderna</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Emanuel design.jpg" alt="Emanuel Design" loading="lazy">
+                        </div>
+                        <h3>Emanuel Design</h3>
+                        <p>Diseños exclusivos y personalizados</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Ray.jpg" alt="Ray" loading="lazy">
+                        </div>
+                        <h3>Ray</h3>
+                        <p>Accesorios y moda juvenil para estar a la última</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Minoshka.jpg" alt="Minoshka" loading="lazy">
+                        </div>
+                        <h3>Minoshka</h3>
+                        <p>Moda infantil colorida y divertida</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Miramas.jpg" alt="Miramas" loading="lazy">
+                        </div>
+                        <h3>Miramas</h3>
+                        <p>Accesorios y complementos de moda</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/Moreca.jpg" alt="Moreca" loading="lazy">
+                        </div>
+                        <h3>Moreca</h3>
+                        <p>Ropa casual y urbana para el día a día</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/NTS.jpg" alt="NTS" loading="lazy">
+                        </div>
+                        <h3>NTS</h3>
+                        <p>Moda juvenil y contemporánea con estilo</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/deportes.jpg" alt="Deportes" loading="lazy">
+                        </div>
+                        <h3>Deportes</h3>
+                        <p>Ropa y accesorios deportivos para atletas</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/ovejita.jpg" alt="La Ovejita" loading="lazy">
+                        </div>
+                        <h3>La Ovejita</h3>
+                        <p>Ropa suave y cómoda para bebés y niños pequeños</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Moda/rikeli.jpg" alt="Rikeli" loading="lazy">
+                        </div>
+                        <h3>Rikeli</h3>
+                        <p>Moda y accesorios exclusivos con diseño único</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="tiendas-grid" id="categorias-tiendas">
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-tshirt"></i>
+
+            <!-- Sección Restaurantes -->
+            <div class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-utensils"></i> Restaurantes
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/tacobell.jpg" alt="Taco Bell" loading="lazy">
+                        </div>
+                        <h3>Taco Bell</h3>
+                        <p>Comida mexicana rápida y deliciosa para toda la familia</p>
                     </div>
-                    <h3>Moda</h3>
-                    <p>Las mejores marcas de ropa y accesorios</p>
-                </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-utensils"></i>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/campero.jpg" alt="Campero" loading="lazy">
+                        </div>
+                        <h3>Campero</h3>
+                        <p>Pollo frito estilo latino con sabor único y auténtico</p>
                     </div>
-                    <h3>Restaurantes</h3>
-                    <p>Deliciosa gastronomía para todos los gustos</p>
-                </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/SanMartin.png" alt="San Martin" loading="lazy">
+                        </div>
+                        <h3>San Martin</h3>
+                        <p>Panadería y repostería artesanal guatemalteca</p>
                     </div>
-                    <h3>Tecnología</h3>
-                    <p>Los últimos dispositivos y gadgets tecnológicos</p>
-                </div>
-                <div class="tienda-card">
-                    <div class="tienda-icon">
-                        <i class="fas fa-gamepad"></i>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/Beria-comida.jpg" alt="Beria" loading="lazy">
+                        </div>
+                        <h3>Beria</h3>
+                        <p>Comida casual y variada para toda la familia</p>
                     </div>
-                    <h3>Entretenimiento</h3>
-                    <p>Diversión para toda la familia</p>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/Boba-comida.jpg" alt="Boba" loading="lazy">
+                        </div>
+                        <h3>Boba</h3>
+                        <p>Bebidas refrescantes y postres modernos tipo bubble tea</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/san carlos -comida.jpg" alt="San Carlos" loading="lazy">
+                        </div>
+                        <h3>San Carlos</h3>
+                        <p>Comida típica guatemalteca con sabor tradicional</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/making fresh.jpg" alt="Making Fresh" loading="lazy">
+                        </div>
+                        <h3>Making Fresh</h3>
+                        <p>Ensaladas frescas y opciones saludables para comer bien</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/Churros - comida.jpg" alt="Churros" loading="lazy">
+                        </div>
+                        <h3>Churros</h3>
+                        <p>Churros artesanales crujientes con chocolate caliente</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/Sarita -comida.jpg" alt="Sarita" loading="lazy">
+                        </div>
+                        <h3>Sarita</h3>
+                        <p>Comida casera con el sabor tradicional de Guatemala</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Restaurantes/Sombrela -comida.jpg" alt="La Sombrela" loading="lazy">
+                        </div>
+                        <h3>La Sombrela</h3>
+                        <p>Restaurante familiar con ambiente acogedor y cómodo</p>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Mapa de tiendas -->
-            <div class="store-map">
-                <h3>Encuentra Tu Tienda</h3>
-                <div class="map-placeholder">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <p>Mapa interactivo de tiendas</p>
-                    <button class="map-button">Ver Mapa Completo</button>
+
+            <!-- Sección Tecnología -->
+            <div class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-mobile-alt"></i> Tecnología
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Tecnologia/Samsung.jpg" alt="Samsung" loading="lazy">
+                        </div>
+                        <h3>Samsung</h3>
+                        <p>Smartphones y tecnología de última generación</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Tecnologia/Max.jpg" alt="Max" loading="lazy">
+                        </div>
+                        <h3>Max</h3>
+                        <p>Celulares, accesorios y servicios móviles completos</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Tecnologia/Mipc.jpg" alt="Mi PC" loading="lazy">
+                        </div>
+                        <h3>Mi PC</h3>
+                        <p>Computadoras, laptops y accesorios tecnológicos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Entretenimiento -->
+            <div class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-gamepad"></i> Entretenimiento
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Entretenimiento/jugueton.jpg" alt="Juguetón" loading="lazy">
+                        </div>
+                        <h3>Juguetón</h3>
+                        <p>Juguetes y diversión para los más pequeños de la casa</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Entretenimiento/Super Cars.jpg" alt="Super Cars" loading="lazy">
+                        </div>
+                        <h3>Super Cars</h3>
+                        <p>Juegos de carreras y diversión con ruedas para niños</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/lexus kids.jpg" alt="Lexus Kids" loading="lazy">
+                        </div>
+                        <h3>Lexus Kids</h3>
+                        <p>Área de juegos y entretenimiento infantil seguro</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/futeca.jpg" alt="Futeca" loading="lazy">
+                        </div>
+                        <h3>Futeca</h3>
+                        <p>Centro deportivo y recreativo para toda la familia</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Comic.jpg" alt="Comic" loading="lazy">
+                        </div>
+                        <h3>Comic</h3>
+                        <p>Cómics, figuras coleccionables y cultura geek</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Finanzas -->
+            <div class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-dollar-sign"></i> Finanzas
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Finanzas/Bam.jpg" alt="BAM" loading="lazy">
+                        </div>
+                        <h3>BAM</h3>
+                        <p>Servicios bancarios y financieros completos para ti</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Finanzas/Intercop.jpg" alt="Intercop" loading="lazy">
+                        </div>
+                        <h3>Intercop</h3>
+                        <p>Cooperativa de ahorro y crédito confiable</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Finanzas/cooperativa fondos.jpg" alt="Cooperativa Fondos" loading="lazy">
+                        </div>
+                        <h3>Cooperativa Fondos</h3>
+                        <p>Soluciones financieras y de ahorro para familias</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Otros Servicios -->
+            <div class="category-section">
+                <h2 class="category-title">
+                    <i class="fas fa-store"></i> Otros Servicios
+                </h2>
+                <div class="stores-grid">
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Cemaco.jpg" alt="Cemaco" loading="lazy">
+                        </div>
+                        <h3>Cemaco</h3>
+                        <p>Electrodomésticos y artículos para equipar tu hogar</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Gran maco.jpg" alt="Gran Maco" loading="lazy">
+                        </div>
+                        <h3>Gran Maco</h3>
+                        <p>Supermercado con productos frescos y variados para tu despensa</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/La torre.jpg" alt="La Torre" loading="lazy">
+                        </div>
+                        <h3>La Torre</h3>
+                        <p>Librería y papelería completa para estudiantes y profesionales</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/optical center.jpg" alt="Optical Center" loading="lazy">
+                        </div>
+                        <h3>Optical Center</h3>
+                        <p>Óptica con lentes y accesorios para tu salud visual</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Pet shop.jpg" alt="Pet Shop" loading="lazy">
+                        </div>
+                        <h3>Pet Shop</h3>
+                        <p>Todo para tus mascotas: comida, juguetes y cuidado</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Manos maravillosas.jpg" alt="Manos Maravillosas" loading="lazy">
+                        </div>
+                        <h3>Manos Maravillosas</h3>
+                        <p>Spa, belleza y cuidado personal para consentirte</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Muebres fiesta.jpg" alt="Muebles Fiesta" loading="lazy">
+                        </div>
+                        <h3>Muebles Fiesta</h3>
+                        <p>Muebles y decoración para embellecer tu hogar</p>
+                    </div>
+                    <div class="store-card">
+                        <div class="store-image">
+                            <img src="images/Master Boach.webp" alt="Master Coach" loading="lazy">
+                        </div>
+                        <h3>Master Coach</h3>
+                        <p>Capacitación y desarrollo personal para alcanzar tus metas</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: var(--dark-blue); color: white;">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Paseo Andaria</h3>
-                    <p>Tu destino de compras favorito</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <div class="footer-logo">
+                        <img src="images/logo png.png" alt="Paseo Andaria" style="height: 80px; width: auto; margin-bottom: 1rem;">
+                        <p>Tu destino de compras, entretenimiento y experiencias únicas</p>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces rápidos</h4>
+                    <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="tiendas.html">Directorio de tiendas</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tiendas.html">Tiendas</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a href="cine.html">Cine</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                         <li><a href="contactanos.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Servicios</h4>
+                    <h4>Contacto</h4>
                     <ul>
-                        <li><a href="#">Estacionamiento gratuito</a></li>
-                        <li><a href="#">WiFi gratuito</a></li>
-                        <li><a href="#">Área de juegos</a></li>
-                        <li><a href="#">Servicio al cliente</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Chimaltenango, Guatemala</li>
+                        <li><i class="fas fa-phone"></i> +502 7849-5000</li>
+                        <li><i class="fas fa-envelope"></i> info@paseoandaria.com</li>
+                        <li><i class="fas fa-clock"></i> Lun - Dom: 10:00 AM - 10:00 PM</li>
                     </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Paseo Andaria. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Paseo Andaria - Chimaltenango, Guatemala. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -183,6 +535,6 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
-    <script src="script-ux.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

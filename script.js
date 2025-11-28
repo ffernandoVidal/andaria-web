@@ -59,6 +59,31 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!heroSlides.length) return;
         
+        // Detectar orientación de imágenes y aplicar clase apropiada
+        heroSlides.forEach(slide => {
+            const img = slide.querySelector('img');
+            if (img) {
+                img.addEventListener('load', function() {
+                    if (this.naturalWidth > this.naturalHeight) {
+                        // Imagen horizontal
+                        this.classList.add('horizontal-img');
+                    } else {
+                        // Imagen vertical
+                        this.classList.add('vertical-img');
+                    }
+                });
+                
+                // Si la imagen ya está cargada
+                if (img.complete) {
+                    if (img.naturalWidth > img.naturalHeight) {
+                        img.classList.add('horizontal-img');
+                    } else {
+                        img.classList.add('vertical-img');
+                    }
+                }
+            }
+        });
+        
         let currentHeroSlide = 0;
         const totalHeroSlides = heroSlides.length;
         let heroAutoSlideInterval;
